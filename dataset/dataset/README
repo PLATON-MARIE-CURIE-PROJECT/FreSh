@@ -1,0 +1,42 @@
+---------
+COMPILE
+---------
+
+You can compile with make (you need the GNU scientific library)
+
+gcc main.c -o generator -lm -lgsl -lgslcblas
+
+
+---------
+RUN
+---------
+Before running the generator do this to create random sets at each run 
+export GSL_RNG_SEED=$RANDOM
+
+./generator --size 10 --length 256 --z-normalize > queryexample.bin
+
+./generator --size 10000000 --length 256 --z-normalize --label-size 100 > labelexample.bin
+--size is how many time series you want
+
+--length is the length of each time series
+
+--z-normalize is a binary flag that specifies that we want them z-normalized
+
+The output is binary and is written on stdout.
+
+
+-----------
+EXAMPLES
+-----------
+
+./generator --size 1024 --length 256 --z-normalize > /home/ekosmas/datasets/dataset1MB.bin
+./generator --size 10240 --length 256 --z-normalize > /home/ekosmas/datasets/dataset10MB.bin
+./generator --size 102400 --length 256 --z-normalize > /home/ekosmas/datasets/dataset100MB.bin
+./generator --size 1048576 --length 256 --z-normalize > /home/ekosmas/datasets/dataset1GB.bin
+./generator --size 10485760 --length 256 --z-normalize > /home/ekosmas/datasets/dataset10GB.bin
+./generator --size 104857600 --length 256 --z-normalize > /home/ekosmas/datasets/dataset100GB.bin
+./generator --size 209715200 --length 256 --z-normalize > /spare/ekosmas/Datasets/Random/dataset200GB.bin
+
+./generator --size 10 --length 256 --z-normalize > /home/ekosmas/datasets/query10.bin
+./generator --size 100 --length 256 --z-normalize > /home/ekosmas/datasets/query100.bin
+./generator --size 1000 --length 256 --z-normalize > /home/ekosmas/datasets/query1000.bin
