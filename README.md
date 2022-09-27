@@ -4,7 +4,7 @@ Repository for the paper "FreSh: Lock-Free Index for Sequence Similarity Search"
 
 # General
 
-Odyssey is the the first lock-free (thus, highly fault-tolerant) data series index that exhibits the same performance as the state-of-the-art lock-based in-memory indexes.
+FreSh is the the first lock-free (thus, highly fault-tolerant) data series index that exhibits the same performance as the state-of-the-art lock-based in-memory indexes.
 
 # How to compile
 
@@ -77,7 +77,7 @@ The main parameters of FreSh are listed below:
 
 Panagiota Fatourou, Professor, University of Crete, ICS-FORTH, University of Paris and LIPADE (faturu@ics.forth.gr)
 
-Eleftherios Kosmas, Postdoctoral Researcher, University of Crete (ekosmas@csd.uoc.gr) and ICS-FORTH
+Eleftherios Kosmas, Postdoctoral Researcher, University of Crete and ICS-FORTH (ekosmas@csd.uoc.gr)
 
 Themis Palpanas, Professor, University of Paris and LIPADE (themis@mi.parisdescartes.fr)
 
